@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Xoa san pham</title>
+    <title>Xoá sản phẩm</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -27,7 +27,7 @@ taoKetNoi($link);
                         <?php while ($rows = mysqli_fetch_assoc($result)) { ?>
                             <div class="list-group-item d-flex justify-content-between align-items-center gap-3">
                                 <span><?php echo htmlspecialchars($rows['ten']); ?></span>
-                                <a class="btn btn-sm btn-outline-danger" href="./xulyxoasp.php?sp=<?php echo (int) $rows['id']; ?>" onclick="return confirm('Ban co chac muon xoa san pham nay?');">Xoa</a>
+                                <a class="btn btn-sm btn-outline-danger" href="./xulyxoasp.php?sp=<?php echo (int) $rows['id']; ?>" onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này?');">Xoá</a>
                             </div>
                         <?php } ?>
                     </div>
