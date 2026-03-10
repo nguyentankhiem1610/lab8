@@ -30,8 +30,8 @@ while ($rows = mysqli_fetch_assoc($result)) {
             <div class='card-body d-flex flex-column'>
                 <h5 class='card-title'>" . htmlspecialchars($rows['ten']) . "</h5>
                 <p class='card-text text-muted flex-grow-1'>" . nl2br(htmlspecialchars($rows['mota'])) . "</p>
-                <p class='text-danger fw-bold mb-3'>Gia: " . number_format((float) $rows['gia'], 0, ',', '.') . " VND</p>
-                <a href='chitiet.php?sp=" . (int) $rows['id'] . "' class='btn btn-primary mt-auto'>Xem chi tiet</a>
+                <p class='text-danger fw-bold mb-3'>Giá: " . number_format((float) $rows['gia'], 0, ',', '.') . " VND</p>
+                <a href='chitiet.php?sp=" . (int) $rows['id'] . "' class='btn btn-primary mt-auto'>Xem chi tiết</a>
             </div>
         </div>
     </div>
@@ -40,7 +40,7 @@ while ($rows = mysqli_fetch_assoc($result)) {
 echo "</div>";
 
 if (!$hasProduct) {
-    echo "<div class='alert alert-warning mt-3 mb-0'>Khong co san pham nao.</div>";
+    echo "<div class='alert alert-warning mt-3 mb-0'>Không có sản phẩm nào.</div>";
 }
 
 if ($totalPages > 1) {
@@ -50,7 +50,7 @@ if ($totalPages > 1) {
 
     $prevDisabled = $page <= 1 ? " disabled" : "";
     $prevLink = "./?page=" . ($page - 1) . $baseQuery;
-    echo "<li class='page-item$prevDisabled'><a class='page-link' href='$prevLink'>Truoc</a></li>";
+    echo "<li class='page-item$prevDisabled'><a class='page-link' href='$prevLink'>Trước</a></li>";
 
     for ($i = 1; $i <= $totalPages; $i++) {
         $active = $i === $page ? " active" : "";
