@@ -31,7 +31,7 @@ $editingId = isset($_GET['dm']) ? (int) $_GET['dm'] : 0;
                             <?php while ($rows = mysqli_fetch_assoc($result)) { ?>
                                 <div class="list-group-item d-flex justify-content-between align-items-center gap-3">
                                     <span><?php echo htmlspecialchars($rows['ten']); ?></span>
-                                    <a class="btn btn-sm btn-outline-primary" href="./doidm.php?dm=<?php echo (int) $rows['id']; ?>">Sua</a>
+                                    <a class="btn btn-sm btn-outline-primary" href="./doidm.php?dm=<?php echo (int) $rows['id']; ?>">Sửa</a>
                                 </div>
                             <?php } ?>
                         </div>
