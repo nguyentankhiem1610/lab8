@@ -65,7 +65,7 @@ $editingId = isset($_GET['sp']) ? (int) $_GET['sp'] : 0;
 
                                 <div class="col-md-6">
                                     <label class="form-label" for="gia">Giá</label>
-                                    <input class="form-control" type="number" min="0" step="1000" name="gia" id="gia" value="<?php echo (float) $row['gia']; ?>" required />
+                                    <input class="form-control" type="number" min="0" name="gia" id="gia" value="<?php echo (float) $row['gia']; ?>" required />
                                 </div>
 
                                 <input type="hidden" value="<?php echo (int) $row['id']; ?>" name="idsp" />
