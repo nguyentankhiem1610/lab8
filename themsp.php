@@ -57,7 +57,7 @@ taoKetNoi($link);
 
                         <div class="col-12">
                             <label class="form-label" for="gia">Giá</label>
-                            <input class="form-control" type="number" min="0" step="1000" name="gia" id="gia" required />
+                            <input class="form-control" type="number" min="0" name="gia" id="gia" required />
                         </div>
 
                         <div class="col-12 d-flex gap-2">
